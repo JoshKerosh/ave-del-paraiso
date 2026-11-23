@@ -1,0 +1,1894 @@
+{
+ "actualizado": "2026-10-23",
+ "piezas": [
+  {
+   "id": "ave-1",
+   "code": "Ave 1",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 10000,
+   "imgs": [
+    "img/r1_0.jpg"
+   ],
+   "nombre": "Anillo Trenzado",
+   "desc": "Bandas de plata: dos con trenzado grabado (A y D) y una en espiral (B). Ligeras, para usar solas o combinadas.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "banda trenzada"
+    },
+    {
+     "l": "B",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "espiral"
+    },
+    {
+     "l": "C",
+     "talla": "6",
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "D",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "banda trenzada"
+    }
+   ],
+   "ban": [
+    [
+     0.5403057560556261,
+     0.09048619220212004,
+     0.7692165558019217,
+     0.5796545396642451
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-2",
+   "code": "Ave 2",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r2_0.jpg"
+   ],
+   "nombre": "Anillo Calado Oval",
+   "desc": "Plata calada en forma de óvalo, con pequeñas esferas en relieve que le dan textura y brillo.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-3",
+   "code": "Ave 3",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r3_0.jpg"
+   ],
+   "nombre": "Anillo Flor Calada",
+   "desc": "Plata calada con una flor al centro, trabajada en relieve. Un anillo con mucho detalle.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "6",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-4",
+   "code": "Ave 4",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r4_0.jpg"
+   ],
+   "nombre": "Anillo Burbujas",
+   "desc": "Plata calada con esferas pequeñas, como un bordado en metal. Llamativo sin ser pesado.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "5,5",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-5",
+   "code": "Ave 5",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r5_0.jpg"
+   ],
+   "nombre": "Anillo Ondas",
+   "desc": "Dos ondas de plata que se cruzan sobre el dedo. Sencillo, moderno y fácil de combinar.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "9",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-6",
+   "code": "Ave 6",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r6_0.jpg"
+   ],
+   "nombre": "Anillo Banda Grabada",
+   "desc": "Bandas de plata con motivos grabados, cada una distinta. Para llevar a diario.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "6",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "D",
+     "talla": "9",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-7",
+   "code": "Ave 7",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r7_0.jpg"
+   ],
+   "nombre": "Anillo Bandas de Plata",
+   "desc": "Bandas de plata con diseños distintos entre sí: lisas, labradas y caladas.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "9",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "D",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-8",
+   "code": "Ave 8",
+   "grupo": "Oportunidades",
+   "cat": "Oportunidades",
+   "price": 6000,
+   "imgs": [
+    "img/r8_0.jpg"
+   ],
+   "nombre": "Anillo Espiral",
+   "desc": "Plata en espiral que abraza el dedo. Minimalista y elegante.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "antes": 8000,
+   "descuento": "Precio de apertura",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "7,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-9",
+   "code": "Ave 9",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r9_0.jpg"
+   ],
+   "nombre": "Anillo Confeti",
+   "desc": "Un racimo de piedras pequeñas y redondas en colores vivos: verde, rojo, azul y amarillo. Cada anillo combina los colores de forma distinta.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "7,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "D",
+     "talla": "6,5",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-10",
+   "code": "Ave 10",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r10_0.jpg"
+   ],
+   "nombre": "Anillo Tres Piedras",
+   "desc": "Tres piedras redondas en línea, cada una de un color, sobre plata. Alegre y equilibrado.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "8,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "7,5",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-11",
+   "code": "Ave 11",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r11_0.jpg"
+   ],
+   "nombre": "Anillo Mosaico",
+   "desc": "Mosaicos de piedra incrustada: una gota multicolor (A), un rectángulo de colores (B) y uno en tonos naranja (C).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": "gota multicolor"
+    },
+    {
+     "l": "B",
+     "talla": "5,5",
+     "vendido": false,
+     "det": "rectangular"
+    },
+    {
+     "l": "C",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "rectangular naranja"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-12",
+   "code": "Ave 12",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r12_0.jpg"
+   ],
+   "nombre": "Anillo Mosaico Rectangular",
+   "desc": "Rectángulos de piedras incrustadas, como pequeños vitrales. El C lleva tonos azules.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "7",
+     "vendido": false,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": "azul"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-13",
+   "code": "Ave 13",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r13_0.jpg"
+   ],
+   "nombre": "Anillo Luna",
+   "desc": "Piedra redonda y lisa al centro: una café con destellos dorados (A) y dos blancas nacaradas (B y C).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7",
+     "vendido": false,
+     "det": "café brillante"
+    },
+    {
+     "l": "B",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "blanca nacarada"
+    },
+    {
+     "l": "C",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "blanca nacarada"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-14",
+   "code": "Ave 14",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r14_0.jpg"
+   ],
+   "nombre": "Anillo Luna Grande",
+   "desc": "Piedra redonda grande que se nota en la mano: blanca nacarada (A) o negra profunda (B).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "blanca nacarada"
+    },
+    {
+     "l": "B",
+     "talla": "9",
+     "vendido": false,
+     "det": "negra"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-15",
+   "code": "Ave 15",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r15_0.jpg"
+   ],
+   "nombre": "Anillo Piedra de Color",
+   "desc": "Una piedra de color sobre plata, en blanco (A), azul (C), rosado (D) o verde (E).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7",
+     "vendido": false,
+     "det": "blanca"
+    },
+    {
+     "l": "B",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "6",
+     "vendido": false,
+     "det": "azul"
+    },
+    {
+     "l": "D",
+     "talla": "9,5",
+     "vendido": false,
+     "det": "rosada"
+    },
+    {
+     "l": "E",
+     "talla": "7",
+     "vendido": false,
+     "det": "verde"
+    }
+   ],
+   "ban": [
+    [
+     0.23539424905195394,
+     0.2659385845782403,
+     0.4212092765107658,
+     0.6553304662743326
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-16",
+   "code": "Ave 16",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r16_0.jpg"
+   ],
+   "nombre": "Anillo Oval",
+   "desc": "Piedra ovalada sobre plata: blanca nacarada (A) o rosada (B).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7",
+     "vendido": false,
+     "det": "blanca"
+    },
+    {
+     "l": "B",
+     "talla": "7",
+     "vendido": false,
+     "det": "rosada"
+    },
+    {
+     "l": "C",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "D",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    }
+   ],
+   "ban": [
+    [
+     0.5015529253149249,
+     0.2503828897531711,
+     0.7284015357107726,
+     0.6414388393197592
+    ],
+    [
+     0.7240942836146489,
+     0.2503828897531711,
+     0.9609931489014517,
+     0.6414388393197592
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-17",
+   "code": "Ave 17",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r17_0.jpg"
+   ],
+   "nombre": "Anillo Gota",
+   "desc": "Gotas de color intenso: azul (A), verde (B), morada (C) y naranja (D).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "8",
+     "vendido": false,
+     "det": "azul"
+    },
+    {
+     "l": "B",
+     "talla": "7",
+     "vendido": false,
+     "det": "verde"
+    },
+    {
+     "l": "C",
+     "talla": "9,5",
+     "vendido": false,
+     "det": "morada"
+    },
+    {
+     "l": "D",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "naranja"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-18",
+   "code": "Ave 18",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r18_0.jpg"
+   ],
+   "nombre": "Anillo Gota Clara",
+   "desc": "Gotas en blanco (B), morado (C) y naranja (D). Delicadas y luminosas.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "9,5",
+     "vendido": false,
+     "det": "blanca"
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": "morada"
+    },
+    {
+     "l": "D",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "naranja"
+    }
+   ],
+   "ban": [
+    [
+     0.047544586134405264,
+     0.2616599957868129,
+     0.2180742774967079,
+     0.631033635278422
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-19",
+   "code": "Ave 19",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r19_0.jpg"
+   ],
+   "nombre": "Anillo Jardín",
+   "desc": "Composiciones de piedras de colores: naranja y negro (A), una flor multicolor (C) y una turquesa redonda (D).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "6,5",
+     "vendido": false,
+     "det": "naranja y negra"
+    },
+    {
+     "l": "B",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "C",
+     "talla": "7",
+     "vendido": false,
+     "det": "flor multicolor"
+    },
+    {
+     "l": "D",
+     "talla": "7",
+     "vendido": false,
+     "det": "turquesa redonda"
+    }
+   ],
+   "ban": [
+    [
+     0.19748839194894033,
+     0.17092642636927638,
+     0.402800030568307,
+     0.7234066341871882
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-20",
+   "code": "Ave 20",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r20_0.jpg"
+   ],
+   "nombre": "Anillo Oval de Color",
+   "desc": "Óvalos de color profundo: café con destellos dorados (A), azul oscuro (B) y morado (C).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "café brillante"
+    },
+    {
+     "l": "B",
+     "talla": "9",
+     "vendido": false,
+     "det": "azul oscuro"
+    },
+    {
+     "l": "C",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "morada"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-21",
+   "code": "Ave 21",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r21_0.jpg"
+   ],
+   "nombre": "Anillo Oval Intenso",
+   "desc": "Óvalos de color intenso: morado (A), naranja (B) y azul (C). Llaman la atención sin esfuerzo.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "9",
+     "vendido": false,
+     "det": "morada"
+    },
+    {
+     "l": "B",
+     "talla": "10",
+     "vendido": false,
+     "det": "naranja"
+    },
+    {
+     "l": "C",
+     "talla": "9,5",
+     "vendido": false,
+     "det": "azul"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-22",
+   "code": "Ave 22",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r22_0.jpg"
+   ],
+   "nombre": "Anillo Navette",
+   "desc": "Piedra alargada en forma de navette, que estiliza la mano: verde (A), coral (B) y turquesa (C).",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "verde"
+    },
+    {
+     "l": "B",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "coral"
+    },
+    {
+     "l": "C",
+     "talla": "7,5",
+     "vendido": false,
+     "det": "turquesa"
+    }
+   ],
+   "ban": [],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-23",
+   "code": "Ave 23",
+   "grupo": "Joyería",
+   "cat": "Anillos",
+   "price": 15000,
+   "imgs": [
+    "img/r23_0.jpg"
+   ],
+   "nombre": "Anillo Navette Claro",
+   "desc": "La navette en blanco nacarado (B) y coral (C), con un brillo suave.",
+   "material": "Plata",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "anillos",
+   "ingreso": "2025-06-01",
+   "units": [
+    {
+     "l": "A",
+     "talla": null,
+     "vendido": true,
+     "det": null
+    },
+    {
+     "l": "B",
+     "talla": "9",
+     "vendido": false,
+     "det": "blanca nacarada"
+    },
+    {
+     "l": "C",
+     "talla": "8,5",
+     "vendido": false,
+     "det": "coral"
+    }
+   ],
+   "ban": [
+    [
+     0.04392587508579274,
+     0.20618991786472812,
+     0.2840189250312229,
+     0.6174417748093948
+    ]
+   ],
+   "coleccion": "Legado"
+  },
+  {
+   "id": "ave-24",
+   "code": "Ave 24",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v24_0.jpg",
+    "img/v24_1.jpg"
+   ],
+   "nombre": "Vestido Halter Noche",
+   "desc": "Largo, con escote halter y espalda descubierta. Estampado sobre fondo azul oscuro.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-25",
+   "code": "Ave 25",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v25_0.jpg",
+    "img/v25_1.jpg"
+   ],
+   "nombre": "Vestido Granada",
+   "desc": "Largo, con manga corta y escote en V, en estampado de tonos rojos. Cómodo y con caída.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-26",
+   "code": "Ave 26",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v26_0.jpg",
+    "img/v26_1.jpg"
+   ],
+   "nombre": "Vestido Jardín",
+   "desc": "Largo, con manga corta y escote en V, en estampado multicolor. Para el calor y para salir.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-27",
+   "code": "Ave 27",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 15000,
+   "imgs": [
+    "img/v27_0.jpg",
+    "img/v27_1.jpg"
+   ],
+   "nombre": "Vestido Lavanda Corto",
+   "desc": "Corto y sin mangas, en estampado gris y morado. Fresco y fácil de combinar.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-28",
+   "code": "Ave 28",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v28_0.jpg",
+    "img/v28_1.jpg"
+   ],
+   "nombre": "Vestido Fucsia Manga Larga",
+   "desc": "Largo, de manga acampanada, en estampado fucsia. Uno de los vestidos con más presencia de la colección.",
+   "material": null,
+   "medidas": null,
+   "especial": "La manga acampanada y el estampado fucsia le dan movimiento al caminar. Es el vestido con más presencia de la colección.",
+   "destacada": true,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-29",
+   "code": "Ave 29",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v29_0.jpg",
+    "img/v29_1.jpg"
+   ],
+   "nombre": "Vestido Halter Blanco y Negro",
+   "desc": "Largo, halter y con la espalda descubierta, en estampado blanco y negro.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-30",
+   "code": "Ave 30",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v30_0.jpg",
+    "img/v30_1.jpg"
+   ],
+   "nombre": "Vestido Halter Laguna",
+   "desc": "Largo, halter y con la espalda descubierta, en tonos azul verdoso.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-31",
+   "code": "Ave 31",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 19000,
+   "imgs": [
+    "img/v31_0.jpg",
+    "img/v31_1.jpg"
+   ],
+   "nombre": "Vestido Halter Arena",
+   "desc": "Largo, halter y con la espalda descubierta, en un tono arena con verde.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-32",
+   "code": "Ave 32",
+   "grupo": "Ropa",
+   "cat": "Vestidos",
+   "price": 15000,
+   "imgs": [
+    "img/v32_0.jpg",
+    "img/v32_1.jpg"
+   ],
+   "nombre": "Vestido Turquesa Asimétrico",
+   "desc": "Largo y asimétrico, strapless, en turquesa con borde naranja. Se mueve al caminar.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Talla única ajustable",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-33",
+   "code": "Ave 33",
+   "grupo": "Ropa",
+   "cat": "Blusas",
+   "price": 10000,
+   "imgs": [
+    "img/v33_0.jpg",
+    "img/v33_1.jpg"
+   ],
+   "nombre": "Blusa Turquesa Bordada",
+   "desc": "Blusa de manga corta en turquesa, con bordado floral en la parte baja. Holgada y fresca.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Blusa",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-35",
+   "code": "Ave 35",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c35_0.jpg"
+   ],
+   "nombre": "Colgante Geoda",
+   "desc": "Una geoda natural: por fuera, piedra; por dentro, pequeños cristales que brillan con la luz. Va en cordón.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-36",
+   "code": "Ave 36",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c36_0.jpg"
+   ],
+   "nombre": "Colgante Geoda Redonda",
+   "desc": "Geoda de forma redonda, con su interior de cristales a la vista. Va en cordón.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-37",
+   "code": "Ave 37",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c37_0.jpg"
+   ],
+   "nombre": "Colgante Gota Verde",
+   "desc": "Piedra verde con vetas, en forma de gota, colgada de un cordón trenzado con cuentas.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-38",
+   "code": "Ave 38",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c38_0.jpg"
+   ],
+   "nombre": "Colgante Oliva Trenzado",
+   "desc": "Piedra oval en verde oliva, en cordón trenzado con cuentas. Color que ilumina la cara.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-39",
+   "code": "Ave 39",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c39_0.jpg"
+   ],
+   "nombre": "Colgante Miel Trenzado",
+   "desc": "Piedra en tono miel, en cordón trenzado con cuentas. Cálido y fácil de llevar.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-40",
+   "code": "Ave 40",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c40_0.jpg"
+   ],
+   "nombre": "Collar Mariposa Canela",
+   "desc": "Una mariposa tejida en macramé en tonos canela, con una piedra al centro del cuerpo.",
+   "material": null,
+   "medidas": null,
+   "especial": "Una mariposa hecha nudo a nudo en macramé: el tejido le da forma a las alas y una piedra hace de cuerpo. No hay dos iguales.",
+   "destacada": true,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-41",
+   "code": "Ave 41",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c41_0.jpg"
+   ],
+   "nombre": "Collar Mariposa Menta",
+   "desc": "La mariposa de macramé en tonos menta, con una piedra clara al centro.",
+   "material": null,
+   "medidas": null,
+   "especial": "La pareja de la Mariposa Canela, en tonos menta. El mismo tejido de macramé, con otro carácter.",
+   "destacada": true,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-42",
+   "code": "Ave 42",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c42_0.jpg"
+   ],
+   "nombre": "Colgante Gota Ocre",
+   "desc": "Gota grande en gris y ocre, con vetas que parecen pintadas. Va en cordón.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-43",
+   "code": "Ave 43",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c43_0.jpg"
+   ],
+   "nombre": "Colgante Cielo",
+   "desc": "Piedra celeste en un marco calado de metal, en cadena. Pequeño y luminoso.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-44",
+   "code": "Ave 44",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c44_0.jpg"
+   ],
+   "nombre": "Collar Sol",
+   "desc": "Piedra ovalada rodeada de rayos metálicos, en una cadena con cuentas turquesa. Una pieza de declaración.",
+   "material": null,
+   "medidas": null,
+   "especial": "Los rayos metálicos convierten la piedra en un pequeño sol. Es el collar de declaración de la colección.",
+   "destacada": true,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-45",
+   "code": "Ave 45",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c45_0.jpg"
+   ],
+   "nombre": "Colgante Verde Oval",
+   "desc": "Piedra verde oval, lisa y luminosa, en una cadena fina. Un colgante limpio para el día a día.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-46",
+   "code": "Ave 46",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c46_0.jpg"
+   ],
+   "nombre": "Colgante Rosa",
+   "desc": "Piedra rosada de buen tamaño, con vetas suaves, en cadena. Femenina sin ser dulce.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-47",
+   "code": "Ave 47",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c47_0.jpg"
+   ],
+   "nombre": "Colgante Gota Miel",
+   "desc": "Gota en tonos naranja y ocre con vetas, en cadena. Cálida, luce con blanco o negro.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-48",
+   "code": "Ave 48",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c48_0.jpg"
+   ],
+   "nombre": "Colgante Verde Claro",
+   "desc": "Piedra verde claro de forma oval, en cadena. Fresca y delicada, ideal con blanco.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-49",
+   "code": "Ave 49",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c49_0.jpg"
+   ],
+   "nombre": "Colgante Hoja Iridiscente",
+   "desc": "Piedra iridiscente en forma de hoja: cambia de tono según la luz. Va en cordón.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-50",
+   "code": "Ave 50",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c50_0.jpg"
+   ],
+   "nombre": "Colgante Gota Oscura",
+   "desc": "Gota oscura con destellos dorados, en cordón. Discreta de lejos, sorprendente de cerca.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-51",
+   "code": "Ave 51",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c51_0.jpg"
+   ],
+   "nombre": "Collar Rígido Rojo",
+   "desc": "Collar rígido de cuero rojo en tres líneas, que termina en una gota. Una pieza con mucha presencia.",
+   "material": null,
+   "medidas": null,
+   "especial": "Tres líneas de cuero rojo que abrazan el cuello y caen en una gota. Una pieza escultural.",
+   "destacada": true,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-52",
+   "code": "Ave 52",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c52_0.jpg"
+   ],
+   "nombre": "Collar Alambre Dorado",
+   "desc": "Alambre dorado trabajado alrededor de una piedra, sobre cuero rojo.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-53",
+   "code": "Ave 53",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c53_0.jpg"
+   ],
+   "nombre": "Collar Cristal Blanco",
+   "desc": "Alambre dorado que envuelve un cristal blanco, sobre cuero. Brilla con la luz.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-54",
+   "code": "Ave 54",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 22000,
+   "imgs": [
+    "img/c54_0.jpg"
+   ],
+   "nombre": "Collar Cristal Lila",
+   "desc": "Alambre dorado que envuelve un cristal lila, sobre cuero.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-55",
+   "code": "Ave 55",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 18000,
+   "imgs": [
+    "img/c55_0.jpg",
+    "img/c55_1.jpg"
+   ],
+   "nombre": "Collar Hilos Lima",
+   "desc": "Muchos hilos verde lima reunidos con aros dorados. Viene con su pulsera a juego.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-56",
+   "code": "Ave 56",
+   "grupo": "Joyería",
+   "cat": "Collares",
+   "price": 20000,
+   "imgs": [
+    "img/c56_0.jpg"
+   ],
+   "nombre": "Collar Hilos Azules",
+   "desc": "Hilos azules con aros dorados y una gota azul al centro.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Collar",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-57",
+   "code": "Ave 57",
+   "grupo": "Joyería",
+   "cat": "Pulseras",
+   "price": 18000,
+   "imgs": [
+    "img/c57_0.jpg"
+   ],
+   "nombre": "Pulsera Gota Azul",
+   "desc": "Pulsera de cuero con una piedra azul en gota y remates dorados.",
+   "material": "Cuero y piedra",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Pulsera",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-58",
+   "code": "Ave 58",
+   "grupo": "Joyería",
+   "cat": "Pulseras",
+   "price": 18000,
+   "imgs": [
+    "img/c58_0.jpg"
+   ],
+   "nombre": "Pulsera Piedra Veteada",
+   "desc": "Pulsera de cuero con una piedra blanca veteada, ovalada.",
+   "material": "Cuero y piedra",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Pulsera",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-59",
+   "code": "Ave 59",
+   "grupo": "Joyería",
+   "cat": "Pulseras",
+   "price": 18000,
+   "imgs": [
+    "img/c59_0.jpg"
+   ],
+   "nombre": "Pulsera Gota Turquesa",
+   "desc": "Pulsera de cuero con una piedra turquesa en gota.",
+   "material": "Cuero y piedra",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Pulsera",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-60",
+   "code": "Ave 60",
+   "grupo": "Joyería",
+   "cat": "Pulseras",
+   "price": 18000,
+   "imgs": [
+    "img/c60_0.jpg"
+   ],
+   "nombre": "Pulsera Gota Verde",
+   "desc": "Pulsera de cuero con una piedra verde en gota.",
+   "material": "Cuero y piedra",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Pulsera",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-61",
+   "code": "Ave 61",
+   "grupo": "Bolsos y cuero",
+   "cat": "Bolsos y cuero",
+   "price": 18000,
+   "imgs": [
+    "img/c61_0.jpg"
+   ],
+   "nombre": "Bolso Negro Tejido",
+   "desc": "Bolso negro de textura tejida, con cierre dorado y cadena para llevar al hombro.",
+   "material": null,
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Bolso",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-62",
+   "code": "Ave 62",
+   "grupo": "Bolsos y cuero",
+   "cat": "Bolsos y cuero",
+   "price": 18000,
+   "imgs": [
+    "img/c62_0.jpg"
+   ],
+   "nombre": "Billetera Repujada Gris",
+   "desc": "Billetera de cuero repujado con flores en relieve, en gris oscuro.",
+   "material": "Cuero repujado",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Billetera",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-63",
+   "code": "Ave 63",
+   "grupo": "Bolsos y cuero",
+   "cat": "Bolsos y cuero",
+   "price": 18000,
+   "imgs": [
+    "img/c63_0.jpg"
+   ],
+   "nombre": "Billetera Repujada Roja",
+   "desc": "Billetera de cuero repujado en rojo, con un gran motivo floral en relieve.",
+   "material": "Cuero repujado",
+   "medidas": null,
+   "especial": "El relieve floral del cuero repujado se siente con los dedos. Un detalle que dura años.",
+   "destacada": true,
+   "tipo": "Billetera",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-64",
+   "code": "Ave 64",
+   "grupo": "Bolsos y cuero",
+   "cat": "Bolsos y cuero",
+   "price": 18000,
+   "imgs": [
+    "img/c64_0.jpg"
+   ],
+   "nombre": "Billetera Repujada Vino",
+   "desc": "Billetera de cuero repujado en tono vino, con broche dorado.",
+   "material": "Cuero repujado",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Billetera",
+   "ingreso": "2026-10-23",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  },
+  {
+   "id": "ave-65",
+   "code": "Ave 65",
+   "grupo": "Bolsos y cuero",
+   "cat": "Bolsos y cuero",
+   "price": 18000,
+   "imgs": [
+    "img/c65_0.jpg"
+   ],
+   "nombre": "Billetera Repujada Dorada",
+   "desc": "Billetera de cuero repujado en dorado, con flores en relieve y broche.",
+   "material": "Cuero repujado",
+   "medidas": null,
+   "especial": null,
+   "destacada": false,
+   "tipo": "Billetera",
+   "ingreso": "2026-10-22",
+   "vendido": false,
+   "coleccion": "Paraíso"
+  }
+ ],
+ "destacadas": [
+  "ave-28",
+  "ave-40",
+  "ave-41",
+  "ave-44",
+  "ave-51",
+  "ave-63"
+ ],
+ "coleccion": "Paraíso",
+ "resenas": [],
+ "envio": [
+  {
+   "zona": "Dentro del Gran Área Metropolitana",
+   "precio": 2450
+  },
+  {
+   "zona": "Fuera del Gran Área Metropolitana",
+   "precio": 3350
+  }
+ ],
+ "vendida_dias": 7,
+ "especiales_max": 6
+}
