@@ -138,6 +138,6 @@ Ser crítico también es dejar cosas afuera. Estas reglas se suelen proponer y a
 | Contenedores de inyección de dependencias | `app.ts` arma todo a mano y se lee de una pasada |
 | Cobertura mínima del 80 % o 100 % | Premia la cantidad de pruebas, no su valor |
 | Límite de líneas por archivo | Un archivo largo pero coherente es mejor que tres partidos sin razón |
-| Estructura de carpetas fija dentro de `panel/` y `sitio/` | Todavía no sabemos qué necesitan. Se decide en F2-T5 y F3-T3 |
+| Estructura de carpetas fija dentro de `panel/` y `sitio/` | Todavía no sabemos qué necesitan. Se decide en F2-T5 y F3-T4 |
 | Hooks que revisan antes de cada commit | El check de GitHub ya lo hace, y un hook lento frena |
 | Comentarios de documentación en cada función | Solo donde el porqué no es obvio |
