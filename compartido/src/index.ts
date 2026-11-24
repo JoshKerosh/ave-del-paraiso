@@ -1,1 +1,0 @@
-export { esMontoValido } from './dinero';

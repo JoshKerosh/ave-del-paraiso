@@ -29,7 +29,7 @@ pnpm test      # pruebas
 | `pnpm typecheck` | Revisa los tipos de la raíz y de cada paquete |
 | `pnpm revisar` | Tipos, lint y formato, sin cambiar nada. Es lo mismo que corre GitHub Actions |
 | `pnpm formatear` | Arregla el formato y lo que ESLint pueda arreglar solo |
-| `pnpm test` | Todas las pruebas (un proyecto de Vitest por paquete) |
+| `pnpm test` | Todas las pruebas (un proyecto de Vitest por paquete, más uno para la raíz) |
 
 ## Estructura
 
@@ -58,7 +58,11 @@ sitio y panel ──HTTP──► api
 - La página y el Panel hablan con la API solo por HTTP, nunca importando su código.
 - Un paquete importa otro por su nombre (`import { esMontoValido } from 'compartido/dinero'`), nunca con `../`.
 
-ESLint hace cumplir estas reglas: si se rompen, `pnpm revisar` falla.
+ESLint hace cumplir estas reglas: si se rompen, `pnpm revisar` falla. La lista de paquetes y qué puede importar cada uno están en `paquetes.ts`; un paquete nuevo se agrega ahí y en `pnpm-workspace.yaml`.
+
+## Código limpio
+
+`pnpm revisar` también revisa tamaño y complejidad de las funciones, nombres y `===`. Las reglas están en `eslint.config.ts` y lo que ESLint no puede revisar, en `CLAUDE.md` (sección «Clean code»).
 
 ## Dependencias
 
