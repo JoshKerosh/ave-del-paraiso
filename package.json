@@ -7,7 +7,8 @@
     "node": ">=22.13"
   },
   "scripts": {
-    "revisar": "pnpm -r typecheck && eslint . && prettier --check .",
+    "typecheck": "tsc --noEmit -p . && pnpm -r typecheck",
+    "revisar": "pnpm typecheck && eslint . && prettier --check .",
     "formatear": "prettier --write . && eslint . --fix",
     "test": "vitest run"
   },

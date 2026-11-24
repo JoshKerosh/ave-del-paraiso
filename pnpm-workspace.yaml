@@ -4,3 +4,6 @@ packages:
   - api
   - compartido
   - pruebas
+
+# No instala si la versión de Node no cumple "engines" del package.json.
+engineStrict: true

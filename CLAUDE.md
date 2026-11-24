@@ -23,6 +23,15 @@ Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md` y `docs/pl
 - Fotos en Cloudflare R2, en 480, 960 y 1600 px. El Panel las achica antes de subirlas.
 - Monorepo con pnpm workspaces.
 
+## Estructura y diseño (SOLID)
+
+- Dirección de dependencias: todos pueden usar `compartido`; `compartido` no usa a nadie y no toca red, base ni archivos (solo reglas puras). `sitio/` y `panel/` hablan con la API solo por HTTP. ESLint lo hace cumplir.
+- Un paquete importa otro por su nombre y sus `exports` (`compartido/dinero`), nunca con `../`.
+- `compartido/` se divide por tema (`dinero.ts`, `pieza.ts`, `venta.ts`…) y se importa por tema, no todo junto.
+- Herramientas de desarrollo en el `package.json` de la raíz; lo que usa el código, en el `package.json` de su paquete. `compartido` se agrega con `"compartido": "workspace:*"`.
+- En la API, cada módulo es una carpeta con capas: `rutas.ts` (HTTP), `servicio.ts` (reglas de negocio, sin HTTP ni SQL), `repositorio.ts` (interfaz) y su implementación con Drizzle. `app.ts` arma todo y entrega las dependencias. Las pruebas del servicio usan un repositorio en memoria.
+- Un módulo nuevo se agrega sin tocar los demás. Las capas se usan cuando hay reglas de negocio; un módulo sin lógica (como `/salud`) no las necesita.
+
 ## Reglas de datos
 
 - El modelo está en `docs/datos.md`. Si una tarea necesita cambiarlo, propón el cambio y espera el sí antes de migrar.
@@ -59,7 +68,8 @@ Se crean en la fase 1; actualiza esta lista cuando existan.
 - `pnpm --filter sitio dev`: página en modo desarrollo.
 - `pnpm db:generar` y `pnpm db:migrar`: migraciones de Drizzle.
 - `pnpm test`: todas las pruebas. `pnpm test:e2e`: Playwright.
+- `pnpm typecheck`: tipos de la raíz y de cada paquete.
 - `pnpm revisar`: tipos, lint y formato (sin cambiar nada).
 - `pnpm formatear`: arregla el formato y lo que ESLint pueda arreglar solo.
 
-pnpm 12 va instalado con `npm install -g pnpm@12.21.0` (no con corepack). Ya existen: `pnpm install`, `pnpm revisar`, `pnpm formatear` y `pnpm test`.
+pnpm 12 va instalado con `npm install -g pnpm@12.21.0` (no con corepack). Ya existen: `pnpm install`, `pnpm typecheck`, `pnpm revisar`, `pnpm formatear` y `pnpm test`.

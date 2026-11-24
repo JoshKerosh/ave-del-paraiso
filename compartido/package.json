@@ -2,6 +2,11 @@
   "name": "compartido",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts",
+    "./*.test": null
+  },
   "scripts": {
     "typecheck": "tsc --noEmit"
   }
