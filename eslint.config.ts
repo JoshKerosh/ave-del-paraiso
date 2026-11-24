@@ -1,3 +1,4 @@
+import comentarios from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import js from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import type { Linter } from 'eslint';
@@ -60,6 +61,11 @@ export default defineConfig(
     'prototipo/**',
   ]),
 
+  {
+    // Una excepción que ya no hace falta es un error: así no quedan excepciones viejas.
+    linterOptions: { reportUnusedDisableDirectives: 'error' },
+  },
+
   js.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
@@ -74,6 +80,15 @@ export default defineConfig(
   },
 
   ...reglasDeDependencias(),
+
+  // Excepciones (eslint-disable): siempre una regla concreta y con su razón después de "--".
+  comentarios.recommended,
+  {
+    rules: {
+      '@eslint-community/eslint-comments/require-description': 'error',
+      '@eslint-community/eslint-comments/no-unlimited-disable': 'error',
+    },
+  },
 
   // En las pruebas, un describe agrupa muchos casos: el límite de líneas no aplica.
   {

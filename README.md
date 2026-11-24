@@ -5,6 +5,7 @@ Tienda en línea de Mar: una página donde la clienta mira piezas y pide por Wha
 - Arquitectura: [docs/arquitectura.md](docs/arquitectura.md)
 - Modelo de datos: [docs/datos.md](docs/datos.md)
 - Plan de la v1: [docs/plan-v1.md](docs/plan-v1.md)
+- Estándares de desarrollo: [docs/standards.md](docs/standards.md)
 - Prototipo de referencia: `prototipo/index.html` (tienda) y `prototipo/panel.html` (Panel)
 
 ## Requisitos
@@ -62,7 +63,7 @@ ESLint hace cumplir estas reglas: si se rompen, `pnpm revisar` falla. La lista d
 
 ## Código limpio
 
-`pnpm revisar` también revisa tamaño y complejidad de las funciones, nombres y `===`. Las reglas están en `eslint.config.ts` y lo que ESLint no puede revisar, en `CLAUDE.md` (sección «Clean code»).
+`pnpm revisar` también revisa tamaño y complejidad de las funciones, nombres y `===`. Las reglas y estándares del proyecto (SOLID, código limpio, errores, pruebas, API, git) están en [docs/standards.md](docs/standards.md).
 
 ## Dependencias
 

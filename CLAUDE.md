@@ -2,7 +2,7 @@
 
 Tienda en línea de Mar (Margarita Vargas): una página donde la clienta mira piezas y pide por WhatsApp con un carrito, y un Panel donde Mar maneja inventario, ventas, pedidos y el contenido de la página. Lo desarrolla Josh.
 
-Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md` y `docs/plan-v1.md`. El prototipo oficial está en `prototipo/`: `index.html` es la tienda y `panel.html` es el Panel. Es la referencia de diseño y de comportamiento de los dos, no código de producción.
+Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md`, `docs/plan-v1.md` y `docs/standards.md`. El prototipo oficial está en `prototipo/`: `index.html` es la tienda y `panel.html` es el Panel. Es la referencia de diseño y de comportamiento de los dos, no código de producción.
 
 ## Seguridad (no se rompe nunca)
 
@@ -23,28 +23,9 @@ Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md` y `docs/pl
 - Fotos en Cloudflare R2, en 480, 960 y 1600 px. El Panel las achica antes de subirlas.
 - Monorepo con pnpm workspaces.
 
-## Estructura y diseño (SOLID)
+## Estándares
 
-- Dirección de dependencias: todos pueden usar `compartido`; `compartido` no usa a nadie y no toca red, base ni archivos (solo reglas puras). `sitio/` y `panel/` hablan con la API solo por HTTP. ESLint lo hace cumplir.
-- Un paquete importa otro por su nombre y sus `exports` (`compartido/dinero`), nunca con `../`.
-- `compartido/` se divide por tema (`dinero.ts`, `pieza.ts`, `venta.ts`…) y se importa por tema, no todo junto.
-- Herramientas de desarrollo en el `package.json` de la raíz; lo que usa el código, en el `package.json` de su paquete. `compartido` se agrega con `"compartido": "workspace:*"`.
-- En la API, cada módulo es una carpeta con capas: `rutas.ts` (HTTP), `servicio.ts` (reglas de negocio, sin HTTP ni SQL), `repositorio.ts` (interfaz) y su implementación con Drizzle. `app.ts` arma todo y entrega las dependencias. Las pruebas del servicio usan un repositorio en memoria.
-- Un módulo nuevo se agrega sin tocar los demás. Las capas se usan cuando hay reglas de negocio; un módulo sin lógica (como `/salud`) no las necesita.
-- La lista de paquetes vive solo en `paquetes.ts` (con la dirección de dependencias). Un paquete nuevo se agrega ahí y en `pnpm-workspace.yaml`; una prueba revisa que coincidan.
-
-## Clean code
-
-ESLint hace cumplir: `===` siempre, sin `console.log`, complejidad máxima 10, anidamiento máximo 3, máximo 3 parámetros (si son más, un objeto), funciones de hasta 50 líneas (aviso), camelCase en variables y funciones, PascalCase en tipos, y las reglas estrictas de typescript-eslint. Lo que ESLint no puede revisar:
-
-- El dominio en español (`pieza`, `venta`, `esMontoValido`); los términos de las librerías quedan como son.
-- Nombres que dicen qué hace o qué es. Si hace falta un comentario para explicar qué hace, mejor renombrar.
-- Los comentarios explican el porqué, no el qué.
-- Sin números mágicos: los valores de negocio (5 intentos, 480/960/1600 px, 7 días) son constantes con nombre en `compartido`.
-- Una sola forma de hacer cada cosa (por ejemplo, `compartido` solo se importa por tema).
-- Errores explícitos: no se tragan en silencio.
-- Sin código muerto ni comentado.
-- Las pruebas describen el comportamiento en una frase.
+Las reglas de estructura (SOLID), código limpio, errores, pruebas, API, base de datos, dependencias y git están en `docs/standards.md`, con su nivel (Obligatorio, Por defecto o Guía) y cómo pedir una excepción. Síguelas, y si una regla estorba, dilo y propón el cambio en vez de saltarla.
 
 ## Reglas de datos
 
@@ -65,6 +46,8 @@ ESLint hace cumplir: `===` siempre, sin `console.log`, complejidad máxima 10, a
 ## Cómo trabajar
 
 - Una tarea a la vez, del plan en `docs/plan-v1.md`. Cada tarea tiene su carpeta `docs/dev/faseN-nombre/tareaN-nombre/`: `descripcion.md`, `plan.md` (se escribe antes del código y espera el sí de Josh) y `progress.md` (se actualiza al avanzar, con fecha). Al terminar una tarea, actualiza también `docs/plan-v1.md` y `docs/dev/progress.md`.
+- `docs/dev/progress.md` es el registro del desarrollo: después de cada cambio, decisión o commit, agrega una línea con la fecha, qué se hizo, por qué y el hash del commit si hubo. Mantén al día también el conteo de tareas hechas y la tarea actual. Está fuera de git, así que no entra en los commits.
+- `docs/plan-v1.md` cambia cuando se toma una decisión que mueve el plan (tareas que entran, salen o cambian): actualízalo junto con la carpeta de la tarea y anota la decisión en `docs/dev/progress.md`.
 - Antes de escribir código, explica el plan de la tarea en pocos pasos y espera el sí de Josh.
 - Josh está aprendiendo: cuando uses algo nuevo (un patrón, una librería, un comando), explícalo en dos o tres líneas.
 - Cada cambio lleva su prueba. Una tarea está lista cuando cumple su «Listo cuando» y las pruebas pasan.
