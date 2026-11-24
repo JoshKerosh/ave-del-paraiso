@@ -2,6 +2,8 @@
 
 PostgreSQL, en tercera forma normal. 25 tablas en 6 áreas y 31 relaciones. Versión visual: artifact «Modelo de datos del Panel».
 
+Solo se crean las tablas de la versión en curso: la v1 crea 16 y la v2 agrega las otras 9 con su migración. Las tablas y columnas de la v2 están marcadas «v2».
+
 Convenciones de la columna Reglas: pk = llave primaria, fk = llave foránea, un = único, ob = obligatorio (NOT NULL).
 
 ## Reglas del modelo
@@ -11,6 +13,23 @@ Convenciones de la columna Reglas: pk = llave primaria, fk = llave foránea, un 
 - La bitácora solo agrega filas; nunca se edita ni se borra.
 - `datos_internos` (costo, proveedor) nunca sale hacia la página ni hacia las respuestas públicas de la API.
 - Dinero en colones, como entero, IVA incluido.
+
+## Qué tablas entran en cada versión
+
+| Área | v1 (16) | v2 (9) |
+|---|---|---|
+| Inventario | `familias`, `categorias`, `colecciones`, `piezas`, `fotos`, `datos_internos`, `unidades_legado` | — |
+| Ventas y pedidos | `ventas` | `eventos`, `resenas` |
+| Página y carrito | `pedidos`, `piezas_del_pedido`, `contenido`, `medios` | `codigos` |
+| Cuenta y acceso | `usuarias`, `sesiones` | `avisos_push`, `llaves_acceso` |
+| Instagram | — | `publicaciones`, `publicacion_piezas`, `conexiones` |
+| Sistema y auditoría | `bitacora`, `ajustes` | `trabajos` |
+
+Columnas de tablas v1 que esperan a la v2, porque apuntan a tablas de la v2 o sirven a módulos de la v2:
+
+- `ventas.codigo_id`, `ventas.descuento`, `pedidos.codigo_id`, `pedidos.descuento`: códigos de descuento.
+- `pedidos.sid`: analítica.
+- `ventas.sincronizada_en`: ventas sin señal.
 
 ## Inventario
 
@@ -134,8 +153,8 @@ Una fila por venta. Deshacer no la borra.
 | `pieza_id` | bigint | fk ob |  |
 | `unidad_id` | bigint | fk | Si fue un anillo del Legado |
 | `pedido_id` | bigint | fk | El pedido del carrito, si vino de ahí |
-| `codigo_id` | bigint | fk | Código usado, si hubo |
-| `descuento` | int |  | Colones descontados |
+| `codigo_id` | bigint | fk | v2. Código usado, si hubo |
+| `descuento` | int |  | v2. Colones descontados |
 | `lote_id` | uuid |  | Piezas vendidas juntas: se ven y se deshacen juntas |
 | `canal` | enum | ob | Carrito · WhatsApp · Instagram · Facebook · En persona |
 | `cantidad` | int | ob |  |
@@ -144,12 +163,12 @@ Una fila por venta. Deshacer no la borra.
 | `nota` | text |  |  |
 | `fecha` | timestamptz | ob |  |
 | `registrada_por` | bigint | fk ob |  |
-| `clave_local` | uuid | un ob | La crea el teléfono: si una venta sin señal se sube dos veces, cuenta una |
-| `sincronizada_en` | timestamptz | ob | Cuándo llegó al servidor; fecha es cuándo se vendió |
+| `clave_local` | uuid | un ob | La crea el Panel: si la misma venta llega dos veces, cuenta una |
+| `sincronizada_en` | timestamptz | ob | v2 (ventas sin señal). Cuándo llegó a la API; fecha es cuándo se vendió |
 | `deshecha_en` | timestamptz |  |  |
 | `deshecha_por` | bigint | fk |  |
 
-### `eventos` · Eventos del catálogo
+### `eventos` · Eventos del catálogo · v2
 
 Lo que hacen las visitas, anónimo. Un «pedir» es un pedido.
 
@@ -166,7 +185,7 @@ Lo que hacen las visitas, anónimo. Un «pedir» es un pedido.
 | `letra` | text |  |  |
 | `datos` | jsonb | ob | El evento completo |
 
-### `resenas` · Reseñas
+### `resenas` · Reseñas · v2
 
 Solo reales y con permiso. El catálogo las muestra cuando hay al menos 3.
 
@@ -212,7 +231,7 @@ Sesiones abiertas y enlaces de «Olvidé mi contraseña». Solo se guarda el tok
 | `usada_en` | timestamptz |  | El enlace sirve una sola vez |
 | `cerrada_en` | timestamptz |  | Cerrar sesión en un equipo perdido |
 
-### `avisos_push` · Avisos al teléfono
+### `avisos_push` · Avisos al teléfono · v2
 
 La dirección de avisos de cada teléfono. Sin ella no hay notificaciones.
 
@@ -224,7 +243,7 @@ La dirección de avisos de cada teléfono. Sin ella no hay notificaciones.
 | `dispositivo` | text |  | Para reconocerlo: iPhone de Mar |
 | `ultimo_uso` | timestamptz |  |  |
 
-### `llaves_acceso` · Llaves de Face ID
+### `llaves_acceso` · Llaves de Face ID · v2
 
 Una llave pública por equipo. La huella nunca sale del teléfono. Si Face ID sale de la v1, se quita solo esta tabla.
 
@@ -239,7 +258,7 @@ Una llave pública por equipo. La huella nunca sale del teléfono. Si Face ID sa
 
 ## Instagram
 
-### `publicaciones` · Posts de Instagram
+### `publicaciones` · Posts de Instagram · v2
 
 Los posts hechos desde el Panel.
 
@@ -253,7 +272,7 @@ Los posts hechos desde el Panel.
 | `publicada_en` | timestamptz |  |  |
 | `creada_por` | bigint | fk ob |  |
 
-### `publicacion_piezas` · Piezas del post
+### `publicacion_piezas` · Piezas del post · v2
 
 Qué piezas van en cada post, en orden.
 
@@ -263,7 +282,7 @@ Qué piezas van en cada post, en orden.
 | `pieza_id` | bigint | pk fk |  |
 | `orden` | int | ob | 1 a 10 |
 
-### `conexiones` · Conexión con Instagram
+### `conexiones` · Conexión con Instagram · v2
 
 El permiso que da Meta para publicar. Vence y se renueva solo.
 
@@ -290,11 +309,11 @@ Cada carrito enviado por WhatsApp. No aparta piezas: se vende al recibir el pago
 | `fecha` | timestamptz | ob |  |
 | `origen` | enum | ob | carrito · ficha · pdf |
 | `subtotal` | int | ob | Colones |
-| `codigo_id` | bigint | fk |  |
-| `descuento` | int |  |  |
+| `codigo_id` | bigint | fk | v2 |
+| `descuento` | int |  | v2 |
 | `total` | int | ob |  |
 | `estado` | enum | ob | nuevo · vendido · no se concretó |
-| `sid` | text |  | Sesión anónima, para la analítica |
+| `sid` | text |  | v2. Sesión anónima, para la analítica |
 
 ### `piezas_del_pedido` · Piezas del pedido
 
@@ -307,7 +326,7 @@ Lo que traía el carrito, con el precio de ese momento.
 | `letra` | text |  | Si es un anillo del Legado |
 | `precio` | int | ob | El que vio la clienta |
 
-### `codigos` · Códigos de descuento
+### `codigos` · Códigos de descuento · v2
 
 Los que la clienta escribe en el carrito. No se suman a Oportunidades.
 
@@ -367,7 +386,7 @@ Cada acción del sistema: quién, qué, sobre qué y cuándo. Solo se agrega, nu
 | `desde` | enum | ob | celular · computadora · sistema |
 | `cuando` | timestamptz | ob |  |
 
-### `trabajos` · Trabajos del servidor
+### `trabajos` · Trabajos del servidor · v2
 
 PDF, respaldos y catálogo. Sus errores salen en Para revisar.
 

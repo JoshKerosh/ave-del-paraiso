@@ -1,71 +1,89 @@
 # Plan de la v1
 
-La v1 es lo necesario para vender. Las semanas son orientativas: si una tarea toma más, se corre lo demás. Cada tarea tiene su «Listo cuando»; no se pasa a la siguiente hasta cumplirlo.
+La v1 es lo necesario para vender. Va por fases, en orden y sin fecha fija: si una tarea toma más, se corre lo demás. Cada tarea tiene su «Listo cuando»; no se pasa a la siguiente hasta cumplirlo.
 
-Fuera de la v1 (ya diseñado para la v2): códigos de descuento, catálogo PDF, Instagram, analítica, Face ID, avisos y reseñas.
+## Qué va en cada archivo
 
-## Semana 1 · La base del repo
+Cada tarea tiene su carpeta `dev/faseN-nombre/tareaN-nombre/` (por ejemplo, `dev/fase1-base-del-repo/tarea2-postgresql-local/`). El número mantiene el orden y el nombre dice de qué se trata. Lo que se pensó va en `plan.md`; lo que pasó en realidad, en `progress.md`.
 
-1. **Monorepo.** pnpm workspaces con `sitio/`, `panel/`, `api/`, `compartido/`, `infra/`, `pruebas/`, `docs/`. TypeScript estricto, ESLint y Prettier compartidos. `.gitignore` con `.env*` (menos `.env.example`).
-   Listo cuando: `pnpm install` y `pnpm revisar` corren sin errores.
-2. **PostgreSQL local.** `infra/docker-compose.yml` con PostgreSQL y un volumen. Variables en `.env.example`.
-   Listo cuando: `docker compose up -d` levanta la base y la API se conecta.
-3. **API mínima.** Fastify con `GET /salud` que responde el estado de la API y de la base. Estructura de plugins por módulo con interruptor.
-   Listo cuando: hay una prueba que llama a `/salud` y pasa.
-4. **Integración continua.** GitHub Actions que corre `pnpm revisar` y `pnpm test` en cada push.
-   Listo cuando: el check sale verde en GitHub.
+| Archivo | Responde | Secciones |
+|---|---|---|
+| `descripcion.md` | ¿Qué es y cuándo está lista? | Qué es · Por qué · Alcance · Depende de · Listo cuando |
+| `plan.md` | ¿Cómo se hace y por qué así? | Pasos · Decisiones · Alternativas descartadas · Por decidir · Riesgos |
+| `progress.md` | ¿Qué pasó? | Estado · Checklist · Registro con fecha · Hallazgos y problemas · Pruebas · Commits · Aprendido · Pendientes |
 
-## Semana 2 · La base de datos
+- `plan.md` se escribe antes del código y espera el sí de Josh.
+- Si algo no sale como se planeó, se anota en `progress.md` y se corrige el plan.
+- Una sección sin contenido lleva «—».
 
-1. **Esquema con Drizzle** a partir de `docs/datos.md`: las 25 tablas, aunque la v1 no las use todas.
-   Listo cuando: `pnpm db:migrar` crea todo en una base vacía.
-2. **Vistas calculadas:** unidades disponibles, pieza vendida y última venta, desde `ventas`.
-   Listo cuando: una prueba vende y deshace, y la vista da el número correcto.
-3. **Validaciones en `compartido/`** con Zod para piezas, ventas y pedidos.
-4. **Datos de prueba** a partir del prototipo (`prototipo/`).
-   Listo cuando: `pnpm db:sembrar` deja la base con piezas de ejemplo.
+El avance general está en [progress.md](dev/progress.md).
 
-## Semana 3 · Cuentas y sesiones
+Fuera de la v1 (ya diseñado para la v2): ventas sin señal, códigos de descuento, catálogo PDF, Instagram, analítica, Face ID, avisos y reseñas.
 
-1. Usuarias con Argon2id, entrar, salir y «Recordarme».
-2. Cookie de sesión segura y protección CSRF. Bloqueo tras 5 intentos fallidos, en el servidor.
-3. «Olvidé mi contraseña» con Resend (enlace de un solo uso, con vencimiento).
-4. Bitácora: cada acción importante deja una fila.
-   Listo cuando: las pruebas cubren entrar, fallar 5 veces, salir y restablecer.
+## Fase 1 · La base del repo
 
-## Semana 4 · Inventario y fotos en la API
+| ID | Tarea | Estado |
+|---|---|---|
+| F1-T1 | [Monorepo](dev/fase1-base-del-repo/tarea1-monorepo/descripcion.md) | Hecha |
+| F1-T2 | [PostgreSQL local](dev/fase1-base-del-repo/tarea2-postgresql-local/descripcion.md) | Pendiente |
+| F1-T3 | [API mínima](dev/fase1-base-del-repo/tarea3-api-minima/descripcion.md) | Pendiente |
+| F1-T4 | [Integración continua](dev/fase1-base-del-repo/tarea4-integracion-continua/descripcion.md) | Pendiente |
 
-1. Piezas, categorías, familias y colecciones: crear, editar, ocultar.
-2. Subida de fotos a R2 (las 3 medidas llegan ya hechas desde el Panel).
-3. Rutas públicas de piezas sin `datos_internos`.
-   Listo cuando: una prueba confirma que el costo nunca aparece en una respuesta pública.
+## Fase 2 · La base de datos
 
-## Semana 5 · El Panel: entrar e inventario
+| ID | Tarea | Estado |
+|---|---|---|
+| F2-T1 | [Esquema con Drizzle](dev/fase2-base-de-datos/tarea1-esquema-drizzle/descripcion.md) | Pendiente |
+| F2-T2 | [Vistas calculadas](dev/fase2-base-de-datos/tarea2-vistas-calculadas/descripcion.md) | Pendiente |
+| F2-T3 | [Validaciones en compartido](dev/fase2-base-de-datos/tarea3-validaciones-compartidas/descripcion.md) | Pendiente |
+| F2-T4 | [Datos de prueba](dev/fase2-base-de-datos/tarea4-datos-de-prueba/descripcion.md) | Pendiente |
 
-1. Panel en Preact con la identidad del prototipo (colores, tipografías, componentes).
-2. Pantallas: entrar, Inicio, Piezas, Nueva pieza con fotos (achicadas en el teléfono a 480, 960 y 1600 px).
-   Listo cuando: Mar puede crear una pieza con fotos desde el teléfono y verla en la lista.
+## Fase 3 · Cuentas y sesiones
 
-## Semana 6 · Ventas, pedidos y ventas sin señal
+| ID | Tarea | Estado |
+|---|---|---|
+| F3-T1 | [Usuarias, entrar y salir](dev/fase3-cuentas-y-sesiones/tarea1-entrar-y-salir/descripcion.md) | Pendiente |
+| F3-T2 | [Cookie, CSRF y bloqueo](dev/fase3-cuentas-y-sesiones/tarea2-cookie-csrf-bloqueo/descripcion.md) | Pendiente |
+| F3-T3 | [Olvidé mi contraseña](dev/fase3-cuentas-y-sesiones/tarea3-olvide-contrasena/descripcion.md) | Pendiente |
+| F3-T4 | [Bitácora](dev/fase3-cuentas-y-sesiones/tarea4-bitacora/descripcion.md) | Pendiente |
 
-1. Marcar vendida, vender juntas, deshacer, resumen del mes. Transacción con bloqueo para no vender dos veces.
-2. Pedidos del carrito: ver, avisar choques («ya se vendió»), copiar mensaje, «Recibí el pago».
-3. Ventas sin señal: el Panel como PWA, piezas guardadas en el teléfono, cola local con `clave_local`, subida al volver la señal y «Para revisar» si hubo choque.
-   Listo cuando: una prueba vende sin red, reconecta y la venta queda una sola vez.
+## Fase 4 · Inventario y fotos en la API
 
-## Semana 7 · La página
+| ID | Tarea | Estado |
+|---|---|---|
+| F4-T1 | [Piezas, categorías y colecciones](dev/fase4-inventario-en-la-api/tarea1-piezas-categorias-colecciones/descripcion.md) | Pendiente |
+| F4-T2 | [Fotos a R2](dev/fase4-inventario-en-la-api/tarea2-fotos-r2/descripcion.md) | Pendiente |
+| F4-T3 | [Rutas públicas](dev/fase4-inventario-en-la-api/tarea3-rutas-publicas/descripcion.md) | Pendiente |
 
-1. Astro en Workers: portada, tiras, categorías, búsqueda, ficha y una página por pieza con su vista previa al compartir.
-2. Carrito en el teléfono, Ref. desde la API y mensaje de WhatsApp.
-3. Caché: hasta 1 día, se limpia al vender o publicar; si la API cae, se muestra la última versión hasta 7 días.
-4. Contenido editable desde el Panel (portada, aviso, secciones) con borrador y publicar. Página de privacidad.
-   Listo cuando: las pruebas de Playwright del prototipo pasan contra la página real.
+## Fase 5 · El Panel: entrar e inventario
 
-## Semana 8 · Salir a producción
+| ID | Tarea | Estado |
+|---|---|---|
+| F5-T1 | [Panel con la identidad del prototipo](dev/fase5-panel-inventario/tarea1-panel-base/descripcion.md) | Pendiente |
+| F5-T2 | [Pantallas de inventario](dev/fase5-panel-inventario/tarea2-pantallas-inventario/descripcion.md) | Pendiente |
 
-1. Elegir proveedor y crear el servidor (2 GB). Llave SSH, actualizaciones automáticas, firewall cerrado, Cloudflare Tunnel.
-2. Entorno de prueba y real. Despliegue de cada carpeta desde GitHub Actions.
-3. Respaldo cada noche a las 2:00 a. m., cifrado en R2 (7 diarios, 4 semanales, 12 mensuales) y una restauración probada.
-4. Sentry y UptimeRobot.
-5. Cargar las piezas reales con Mar y lanzar.
-   Listo cuando: Mar vende una pieza real de principio a fin.
+## Fase 6 · Ventas y pedidos
+
+| ID | Tarea | Estado |
+|---|---|---|
+| F6-T1 | [Ventas](dev/fase6-ventas-y-pedidos/tarea1-ventas/descripcion.md) | Pendiente |
+| F6-T2 | [Pedidos del carrito](dev/fase6-ventas-y-pedidos/tarea2-pedidos-del-carrito/descripcion.md) | Pendiente |
+
+## Fase 7 · La página
+
+| ID | Tarea | Estado |
+|---|---|---|
+| F7-T1 | [Astro en Workers](dev/fase7-pagina/tarea1-astro-en-workers/descripcion.md) | Pendiente |
+| F7-T2 | [Carrito y WhatsApp](dev/fase7-pagina/tarea2-carrito-whatsapp/descripcion.md) | Pendiente |
+| F7-T3 | [Caché](dev/fase7-pagina/tarea3-cache/descripcion.md) | Pendiente |
+| F7-T4 | [Contenido editable](dev/fase7-pagina/tarea4-contenido-editable/descripcion.md) | Pendiente |
+
+## Fase 8 · Salir a producción
+
+| ID | Tarea | Estado |
+|---|---|---|
+| F8-T1 | [Base de producción](dev/fase8-produccion/tarea1-base-de-produccion/descripcion.md) | Pendiente |
+| F8-T2 | [Entornos y despliegue](dev/fase8-produccion/tarea2-entornos-y-despliegue/descripcion.md) | Pendiente |
+| F8-T3 | [Respaldos](dev/fase8-produccion/tarea3-respaldos/descripcion.md) | Pendiente |
+| F8-T4 | [Monitoreo](dev/fase8-produccion/tarea4-monitoreo/descripcion.md) | Pendiente |
+| F8-T5 | [Lanzar](dev/fase8-produccion/tarea5-lanzar/descripcion.md) | Pendiente |
