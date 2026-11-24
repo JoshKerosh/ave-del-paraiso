@@ -2,7 +2,7 @@
 
 Tienda en línea de Mar (Margarita Vargas): una página donde la clienta mira piezas y pide por WhatsApp con un carrito, y un Panel donde Mar maneja inventario, ventas, pedidos y el contenido de la página. Lo desarrolla Josh.
 
-Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md`, `docs/plan-v1.md` y `docs/standards.md`. El prototipo oficial está en `prototipo/`: `index.html` es la tienda y `panel.html` es el Panel. Es la referencia de diseño y de comportamiento de los dos, no código de producción.
+Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md`, `docs/plan-v1.md` y `docs/standards.md`, y los ADRs de `docs/decisiones/` que toque la tarea. El prototipo oficial está en `prototipo/`: `index.html` es la tienda y `panel.html` es el Panel. Es la referencia de diseño y de comportamiento de los dos, no código de producción.
 
 ## Seguridad (no se rompe nunca)
 
@@ -19,7 +19,7 @@ Antes de cualquier tarea, lee `docs/arquitectura.md`, `docs/datos.md`, `docs/pla
 - `panel/`: Preact con Vite, instalable (PWA), en Cloudflare Pages. En la v1 necesita señal; las ventas sin señal son de la v2.
 - `api/`: Hono en Cloudflare Workers, sin servidor propio. Se conecta a PostgreSQL con Hyperdrive. Un módulo por carpeta. En la v1 solo el módulo de pedidos tiene interruptor (en la tabla `ajustes`).
 - `compartido/`: tipos y validaciones con Zod que usan la API, el Panel y la página. Una regla se escribe una sola vez.
-- Base de datos: PostgreSQL con Drizzle (esquema y migraciones). Desarrollo y pruebas en Docker local (`ave_desarrollo` y `ave_pruebas`); producción en PlanetScale.
+- Base de datos: PostgreSQL con Drizzle (esquema y migraciones). Desarrollo y pruebas en Docker local (`ave_desarrollo` y `ave_pruebas`); entorno de prueba en Neon; producción en PlanetScale.
 - Fotos en Cloudflare R2, en 480, 960 y 1600 px. El Panel las achica antes de subirlas.
 - Monorepo con pnpm workspaces.
 
@@ -45,9 +45,12 @@ Las reglas de estructura (SOLID), código limpio, errores, pruebas, API, base de
 
 ## Cómo trabajar
 
-- Una tarea a la vez, del plan en `docs/plan-v1.md`. Cada tarea tiene su carpeta `docs/dev/faseN-nombre/tareaN-nombre/`: `descripcion.md`, `plan.md` (se escribe antes del código y espera el sí de Josh) y `progress.md` (se actualiza al avanzar, con fecha). Al terminar una tarea, actualiza también `docs/plan-v1.md` y `docs/dev/progress.md`.
-- `docs/dev/progress.md` es el registro del desarrollo: después de cada cambio, decisión o commit, agrega una línea con la fecha, qué se hizo, por qué y el hash del commit si hubo. Mantén al día también el conteo de tareas hechas y la tarea actual. Está fuera de git, así que no entra en los commits.
-- `docs/plan-v1.md` cambia cuando se toma una decisión que mueve el plan (tareas que entran, salen o cambian): actualízalo junto con la carpeta de la tarea y anota la decisión en `docs/dev/progress.md`.
+- Una tarea a la vez, del plan en `docs/plan-v1.md`, que es la única fuente del estado (tabla de tareas y «Tarea actual»). Al empezar o terminar una tarea, actualiza ahí su estado.
+- Cada tarea tiene su carpeta `docs/dev/faseN-nombre/tareaN-nombre/` (fuera de git). Las tareas futuras solo tienen `descripcion.md`, sacada del plan: si el plan cambia, se actualiza (si no coinciden, manda el plan). Cuando una tarea empieza, se agregan `plan.md` (se escribe antes del código y espera el sí de Josh) y `progress.md` (registro, hallazgos, pruebas, commits, aprendido y pendientes; sin estado).
+- `docs/dev/progress.md` es el registro del desarrollo: después de cada cambio, decisión o commit, agrega una línea con la fecha, qué se hizo, por qué y el hash del commit si hubo. Solo registro: el estado está en el plan.
+- `docs/plan-v1.md` cambia cuando una decisión mueve el plan (tareas que entran, salen o cambian). Anota la decisión en `docs/dev/progress.md`.
+- Una decisión de arquitectura (nueva o que cambia otra) se registra como ADR en `docs/decisiones/` (ver su README). Un ADR aceptado no se edita: se reemplaza por uno nuevo.
+- Ramas: `dev` publica en el entorno de prueba y `main` en producción. A `main` solo por PR con el check verde.
 - Antes de escribir código, explica el plan de la tarea en pocos pasos y espera el sí de Josh.
 - Josh está aprendiendo: cuando uses algo nuevo (un patrón, una librería, un comando), explícalo en dos o tres líneas.
 - Cada cambio lleva su prueba. Una tarea está lista cuando cumple su «Listo cuando» y las pruebas pasan.

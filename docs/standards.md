@@ -88,7 +88,7 @@ Al revisar cada fase, `git grep "eslint-disable"` muestra todas las excepciones 
 | Regla | Nivel | Por qué |
 |---|---|---|
 | Cada cambio lleva su prueba | Por defecto | Así lo dice `CLAUDE.md`. Una tarea no está lista sin pruebas |
-| Las reglas de negocio (vender, deshacer, precios, permisos) se prueban siempre | Por defecto (se revisa en cada tarea) | Son lo que no puede fallar. En la fase 6 se decide si se mide la cobertura de los servicios |
+| Las reglas de negocio (vender, deshacer, precios, permisos) se prueban siempre | Por defecto (se revisa en cada tarea) | Son lo que no puede fallar. En F4-T2 se decide si se mide la cobertura de los servicios |
 | El nombre de la prueba describe el comportamiento en una frase | Por defecto | La lista de pruebas se lee como la especificación |
 | Cada prueba sigue preparar → actuar → comprobar | Guía | Se ve rápido qué se prueba |
 | En las pruebas, usar repositorios en memoria antes que simular funciones (mocks) | Por defecto | Una simulación prueba cómo está hecho el código; un repositorio en memoria prueba qué hace |
@@ -99,7 +99,7 @@ Al revisar cada fase, `git grep "eslint-disable"` muestra todas las excepciones 
 
 | Regla | Nivel | Por qué |
 |---|---|---|
-| Las respuestas públicas se validan con su esquema (`PiezaPublica`), que elimina los campos no declarados | Obligatorio (desde F4-T3) | El costo no puede salir ni por error |
+| Las respuestas públicas se validan con su esquema (`PiezaPublica`), que elimina los campos no declarados | Obligatorio (desde F2-T4) | El costo no puede salir ni por error |
 | Los errores responden siempre igual: `{ error: { codigo, mensaje } }`. `codigo` es fijo para el código; `mensaje` está en español para Mar | Por defecto | El Panel muestra el mensaje sin traducir nada |
 | Códigos HTTP con su significado: 400 datos mal, 401 sin sesión, 403 sin permiso, 404 no existe, 409 choque (ya vendida), 500 error inesperado | Por defecto | Cualquiera entiende qué pasó |
 | Las rutas y campos van en español, en minúsculas, separados con guion en las rutas (`/piezas/ave-52`) | Por defecto | Coherente con el dominio y con las direcciones de la página |
@@ -138,6 +138,6 @@ Ser crítico también es dejar cosas afuera. Estas reglas se suelen proponer y a
 | Contenedores de inyección de dependencias | `app.ts` arma todo a mano y se lee de una pasada |
 | Cobertura mínima del 80 % o 100 % | Premia la cantidad de pruebas, no su valor |
 | Límite de líneas por archivo | Un archivo largo pero coherente es mejor que tres partidos sin razón |
-| Estructura de carpetas fija dentro de `panel/` y `sitio/` | Todavía no sabemos qué necesitan. Se decide en F5-T1 y F7-T1 |
+| Estructura de carpetas fija dentro de `panel/` y `sitio/` | Todavía no sabemos qué necesitan. Se decide en F2-T5 y F3-T3 |
 | Hooks que revisan antes de cada commit | El check de GitHub ya lo hace, y un hook lento frena |
 | Comentarios de documentación en cada función | Solo donde el porqué no es obvio |

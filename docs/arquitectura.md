@@ -2,7 +2,7 @@
 
 Un solo producto con dos caras: **la página**, donde la clienta mira y pide por WhatsApp, y **el Panel**, donde Mar maneja piezas, ventas y lo que muestra la página. En medio, **una API**, la única que toca los datos. Todo en TypeScript y todo en Cloudflare: la página, el Panel, la API y las fotos. La base de datos es PostgreSQL administrado. No hay servidor propio que mantener.
 
-Versión navegable: artifact «Arquitectura Ave del Paraíso». Modelo de datos: artifact «Modelo de datos del Panel». Prototipo oficial: «Sitio y Panel Ave del Paraíso».
+Cada decisión importante tiene su ADR en `docs/decisiones/`, con el contexto y las alternativas descartadas. Versión navegable: artifact «Arquitectura Ave del Paraíso». Modelo de datos: artifact «Modelo de datos del Panel». Prototipo oficial: «Sitio y Panel Ave del Paraíso».
 
 Actualizado el 23 de noviembre de 2026. Reemplaza la versión del 22 de noviembre: la API pasa de Fastify en un servidor a Hono en Cloudflare Workers, la base pasa a PostgreSQL administrado, y las ventas sin señal pasan a la v2.
 
@@ -13,12 +13,14 @@ Actualizado el 23 de noviembre de 2026. Reemplaza la versión del 22 de noviembr
 | ¿Qué lenguaje? | TypeScript en la página, el Panel y la API | Decidido |
 | ¿Con qué se hace la página? | Astro | Decidido |
 | ¿Con qué se hace el Panel? | Preact con Vite | Decidido |
-| ¿Con qué se hace la API? | Hono. También corre en Node, así que cambiar de plataforma no obliga a reescribirla | Decidido (23 nov) |
-| ¿Dónde corre la API? | Cloudflare Workers. Sin servidor propio | Decidido (23 nov) |
-| ¿Dónde vive la base de datos? | PostgreSQL administrado, conectado con Hyperdrive | Decidido (23 nov) |
-| ¿Qué proveedor de base para producción? | PlanetScale Postgres PS-5 (USD 5 al mes). Se crea en la fase 8 | Decidido (23 nov) |
-| ¿Y para desarrollo y pruebas? | Docker en la máquina de Josh: `ave_desarrollo` y `ave_pruebas`. GitHub Actions levanta su propia base en cada revisión | Decidido (23 nov) |
-| ¿Base para el entorno de prueba en la nube? | Se decide en la fase 8. Opción: Neon gratis | **Por decidir** |
+| ¿Con qué se hace la API? | Hono. También corre en Node, así que cambiar de plataforma no obliga a reescribirla | Decidido ([ADR 0002](decisiones/0002-api-en-hono-sobre-workers.md)) |
+| ¿Dónde corre la API? | Cloudflare Workers. Sin servidor propio. Desplegada desde la fase 1 | Decidido ([ADR 0002](decisiones/0002-api-en-hono-sobre-workers.md)) |
+| ¿Dónde vive la base de datos? | PostgreSQL administrado, conectado con Hyperdrive | Decidido ([ADR 0003](decisiones/0003-postgresql-administrado.md)) |
+| ¿Qué proveedor de base para producción? | PlanetScale Postgres PS-5 (USD 5 al mes). Se crea en la fase 7 | Decidido ([ADR 0003](decisiones/0003-postgresql-administrado.md)) |
+| ¿Y para desarrollo y pruebas? | Docker en la máquina de Josh: `ave_desarrollo` y `ave_pruebas`. GitHub Actions levanta su propia base en cada revisión | Decidido ([ADR 0003](decisiones/0003-postgresql-administrado.md)) |
+| ¿Base para el entorno de prueba en la nube? | Neon, plan gratis, desde la fase 1 | Decidido ([ADR 0003](decisiones/0003-postgresql-administrado.md)) |
+| ¿Cómo se publica? | `dev` publica en el entorno de prueba; `main`, en producción. A `main` solo por PR con el check verde | Decidido ([ADR 0007](decisiones/0007-ramas-dev-y-main.md)) |
+| ¿En qué orden se construye? | Por rebanadas: cada fase entrega algo que Mar puede ver | Decidido ([ADR 0008](decisiones/0008-plan-por-rebanadas.md)) |
 | ¿Cada pieza tiene su página para compartir? | Sí, desde la v1: `sitio.com/pieza/ave-52` | Decidido |
 | ¿Las páginas se generan antes o al pedirlas? | Al pedirlas, con Astro en Workers, y quedan en caché | Decidido |
 | ¿Quién hace los 3 tamaños de foto? | El Panel, en el teléfono, antes de subirlas | Decidido |
@@ -27,13 +29,13 @@ Actualizado el 23 de noviembre de 2026. Reemplaza la versión del 22 de noviembr
 | ¿Qué proveedor de correo? | Resend, plan gratis, para «Olvidé mi contraseña» | Decidido |
 | ¿Correo para recibir? | `hola@avedelparaisocr.com` con Cloudflare Email Routing, que reenvía gratis al correo de Mar | Decidido |
 | ¿Qué entra en la v1? | Lo necesario para vender (ver abajo) | Decidido |
-| ¿Se puede vender sin señal? | En la v2. En la v1 el Panel se instala en el teléfono pero necesita señal | Decidido (23 nov) |
-| ¿Qué tablas se crean? | Solo las de la versión en curso: 16 en la v1, las otras 9 con la v2 | Decidido (23 nov) |
-| ¿Plan de Workers? | Gratis para empezar. Argon2id puede pedir el plan de USD 5 (más tiempo de procesador) | **Por decidir** en la fase 3 |
+| ¿Se puede vender sin señal? | En la v2. En la v1 el Panel se instala en el teléfono pero necesita señal | Decidido ([ADR 0005](decisiones/0005-ventas-sin-senal-en-v2.md)) |
+| ¿Qué tablas se crean? | Solo las de la versión en curso: 16 en la v1, las otras 9 con la v2 | Decidido ([ADR 0004](decisiones/0004-solo-tablas-de-la-version.md)) |
+| ¿Plan de Workers? | Gratis para empezar. Argon2id puede pedir el plan de USD 5 (más tiempo de procesador) | **Por decidir**: se mide en F1-T5 |
 | ¿Instagram? | v2. Necesita cuenta profesional conectada a una página de Facebook | Decidido |
 | ¿Cómo se hace el PDF? | v2. Plantilla HTML fija en el repo. Sin servidor, se convierte con Cloudflare Browser Rendering u otra opción que se elige en la v2 | Decidido (herramienta por decidir en la v2) |
 | ¿Monitor y errores? | Sentry (gratis, 1 usuario) y UptimeRobot (gratis, cada 5 minutos) | Decidido |
-| ¿Respaldos? | Todos los días a las 2:00 a. m., cifrados en R2: 7 diarios, 4 semanales y 12 mensuales. Los corre GitHub Actions | Decidido |
+| ¿Respaldos? | Todos los días a las 2:00 a. m., cifrados en R2: 7 diarios, 4 semanales y 12 mensuales. Los corre GitHub Actions | Decidido ([ADR 0006](decisiones/0006-respaldos-con-github-actions.md)) |
 | ¿Caché de la página? | Hasta 1 día; se limpia al vender o publicar. Si la API cae, se muestra la última versión hasta 7 días | Decidido |
 | ¿Analítica? | v2, sin cookies ni datos personales | Decidido |
 
@@ -70,7 +72,7 @@ api/         Hono en Workers: un módulo por carpeta, migraciones Drizzle
 compartido/  tipos y validaciones (Zod) que usan página, Panel y API
 infra/       docker-compose de desarrollo, respaldos, configuración de Cloudflare
 pruebas/     Playwright: página y Panel
-docs/        arquitectura, datos, y docs/dev con el plan y cada tarea
+docs/        arquitectura, datos, plan, estándares, decisiones (ADRs); docs/dev (fuera de git) con el detalle de cada tarea
 prototipo/   prototipo de la tienda y del Panel, como referencia
 ```
 
@@ -194,7 +196,7 @@ Cada módulo es una carpeta de la API con sus tablas y sus rutas. En la v1 solo 
 1. Crear la cuenta de Cloudflare (Josh) y agregar a Mar como miembro, para que nunca quede sin acceso.
 2. Comprar el dominio en Cloudflare Registrar (queda con DNS y SSL listos).
 3. Crear la base en PlanetScale (desde el panel de Cloudflare, para tener una sola factura) y conectarla con Hyperdrive.
-4. Publicar la API (Workers), la página (Workers) y el Panel (Pages) desde GitHub Actions, con entorno de prueba y real. Los secretos van en los secretos de Cloudflare.
+4. Publicar la API (Workers), la página (Workers) y el Panel (Pages) desde GitHub Actions: `dev` al entorno de prueba (Neon) y `main` a producción (PlanetScale). Los secretos van en los secretos de Cloudflare y de GitHub.
 5. Programar el respaldo nocturno en GitHub Actions y probar una restauración desde el día 1.
 6. Configurar Sentry y UptimeRobot.
 
